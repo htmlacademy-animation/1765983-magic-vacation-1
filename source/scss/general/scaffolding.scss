@@ -99,3 +99,15 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
