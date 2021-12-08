@@ -185,4 +185,12 @@
 
 .chat__footer {
   margin-top: auto;
+  
+  #message-form {
+    justify-content: flex-end;
+
+    input {
+      animation: inputGrow 0.5s ease-out;
+    }
+  }
 }
