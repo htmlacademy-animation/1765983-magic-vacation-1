@@ -22,3 +22,9 @@
       transform: translateX(0);
     }
   }
+
+  @keyframes inputGrow {
+    from {
+      width: 0;
+    }
+  }
