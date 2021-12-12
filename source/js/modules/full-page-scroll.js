@@ -40,6 +40,7 @@ export default class FullPageScroll {
   }
 
   onUrlHashChanged() {
+    this.leavingScreen = this.activeScreen;
     const newIndex = Array.from(this.screenElements).findIndex((screen) => location.hash.slice(1) === screen.id);
     this.activeScreen = (newIndex < 0) ? 0 : newIndex;
     this.changePageDisplay();
@@ -52,14 +53,32 @@ export default class FullPageScroll {
   }
 
   changeVisibilityDisplay() {
+    // story screen --> prizes screen
+    const isFillScreen = this.leavingScreen === 1 && this.activeScreen === 2;
+
     this.screenElements.forEach((screen) => {
       screen.classList.add(`screen--hidden`);
       screen.classList.remove(`active`);
     });
-    this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
-    setTimeout(() => {
-      this.screenElements[this.activeScreen].classList.add(`active`);
-    }, 100);
+
+    if (isFillScreen) {
+      this.screenElements[this.leavingScreen].classList.remove('screen--hidden');
+      this.screenElements[this.leavingScreen].classList.add('screen--leaving');
+
+      setTimeout(() => {
+        this.screenElements[this.leavingScreen].classList.remove('screen--leaving');
+        this.screenElements[this.leavingScreen].classList.add('screen--hidden');
+        
+        this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
+        this.screenElements[this.activeScreen].classList.add(`active`);
+      }, 300);
+    } else {
+      this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
+      
+      setTimeout(() => {
+        this.screenElements[this.activeScreen].classList.add(`active`);
+      }, 100);
+    }
   }
 
   changeActiveMenuItem() {
