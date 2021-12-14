@@ -45,3 +45,44 @@
     height: 100%;
   }
 }
+
+@keyframes rulesBullet {
+  0% {
+    color: transparent;
+    transform: scale(0);
+  }
+
+  30% {
+    color: transparent;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes rulesText {
+  0% {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rulesLink {
+  from {
+    opacity: 0;
+    width: 0;
+    color: transparent;
+  }
+  70% {
+    color: transparent;
+  }
+  to {
+    width: 18rem;
+  }
+}
