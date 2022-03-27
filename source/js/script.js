@@ -8,6 +8,7 @@ import result from "./modules/result.js";
 import form from "./modules/form.js";
 import social from "./modules/social.js";
 import FullPageScroll from "./modules/full-page-scroll";
+import FullPageAnimation from "./modules/full-page-animation";
 import common from "./modules/common";
 
 // init modules
@@ -23,3 +24,6 @@ common();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+const fullPageAnimation = new FullPageAnimation();
+fullPageAnimation.init();
