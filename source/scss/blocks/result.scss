@@ -45,7 +45,7 @@
     height: 100%;
   }
 
-  img {
+  img:not(.result__image-img) {
     display: block;
     width: 100%;
     height: 100%;
@@ -265,6 +265,173 @@
 
     @media (max-width: $mobile) and (orientation: landscape) {
       width: 45rem;
+    }
+  }
+}
+
+.result__image-img {
+  position: absolute;
+
+  &.img__suitcase {
+    z-index: 4;
+    width: 35rem;
+    top: 30rem;
+    left: 52rem;
+    animation: slideInSuitcase 0.5s ease-in-out both;
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      width: 25rem;
+      top: 20rem;
+      left: 8rem;
+    }
+
+    @media (max-width: $tablet) and (orientation: landscape) {
+      width: 30rem;
+      top: 30rem;
+      left: 35rem;
+    }
+
+    @media (max-width: $mobile) and (orientation: portrait) {
+      width: 20rem;
+      top: 20rem;
+      left: 7rem;
+    }
+    
+    @media (max-width: $mobile) and (orientation: landscape) {
+      width: 16rem;
+      top: 10rem;
+      left: 16rem;
+    }
+  }
+
+  &.img__flamingo {
+    z-index: 5;
+    width: 23rem;
+    top: 40rem;
+    left: 50rem;
+    animation: fadeInFlamingo 0.5s ease-in, shakeFlamingo 2s ease-in-out 0.5s 2;
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      width: 15rem;
+      top: 30rem;
+      left: 8rem;
+    }
+
+    @media (max-width: $tablet) and (orientation: landscape) {
+      width: 20rem;
+      top: 37rem;
+      left: 33rem;
+    }
+
+    @media (max-width: $mobile) and (orientation: portrait) {
+      width: 12rem;
+      top: 28rem;
+      left: 8rem;
+    }
+
+    @media (max-width: $mobile) and (orientation: landscape) {
+      width: 10rem;
+      top: 15rem;
+      left: 16rem;
+    }
+  }
+
+  &.img__leaf-blue-1 {
+    z-index: 3;
+    width: 25rem;
+    top: 30rem;
+    left: 75rem;
+    transform-origin: 20% 75%;
+    animation: shakeLeafBlue1 2s ease-in-out 0.3s both;
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      width: 16rem;
+      top: 23rem;
+      left: 23rem;
+    }
+
+    @media (max-width: $tablet) and (orientation: landscape) {
+      width: 22rem;
+      top: 32rem;
+      left: 53rem;
+    }
+
+    @media (max-width: $mobile) and (orientation: portrait) {
+      width: 12rem;
+      top: 23rem;
+      left: 20rem;
+    }
+    
+    @media (max-width: $mobile) and (orientation: landscape) {
+      width: 10rem;
+      top: 13rem;
+      left: 26rem;
+    }
+  }
+
+  &.img__leaf-blue-2 {
+    z-index: 3;
+    width: 25rem;
+    top: 40rem;
+    left: 40rem;
+    transform-origin: 95% 45%;
+    animation: shakeLeafBlue2 2s ease-in-out 0.3s both;
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      width: 16rem;
+      top: 30rem;
+      left: 2rem;
+    }
+        
+    @media (max-width: $tablet) and (orientation: landscape) {
+      width: 22rem;
+      top: 38rem;
+      left: 24rem;
+    }
+
+    @media (max-width: $mobile) and (orientation: portrait) {
+      width: 12rem;
+      top: 28rem;
+      left: 3rem;
+    }
+
+    @media (max-width: $mobile) and (orientation: landscape) {
+      width: 10rem;
+      top: 16rem;
+      left: 12rem;
+    }
+  }
+
+  &.img__leaf-green {
+    z-index: 3;
+    width: 25rem;
+    top: 45rem;
+    left: 75rem;
+    transform-origin: 0 80%;
+    animation: shakeLeafGreen 1.9s ease-in-out 0.4s both;
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      width: 16rem;
+      top: 30rem;
+      left: 25rem;
+    }
+
+    @media (max-width: $tablet) and (orientation: landscape) {
+      width: 22rem;
+      top: 42rem;
+      left: 55rem;
+    }
+
+    @media (max-width: $mobile) and (orientation: portrait) {
+      width: 12rem;
+      top: 29rem;
+      left: 21rem;
+    }
+
+    @media (max-width: $mobile) and (orientation: landscape) {
+      width: 10rem;
+      top: 17rem;
+      left: 27rem;
     }
   }
 }
