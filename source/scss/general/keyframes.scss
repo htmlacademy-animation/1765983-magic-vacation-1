@@ -1,4 +1,3 @@
-
 @keyframes fadeInFromBottom {
   from {
     opacity: 0;
@@ -10,7 +9,7 @@
     transform: translateY(0);
   }
 }
-  
+
 @keyframes fadeInFormRight {
   from {
     opacity: 0;
@@ -61,7 +60,6 @@
   }
 }
 
-
 @keyframes rulesText {
   0% {
     opacity: 0;
@@ -84,5 +82,133 @@
   }
   to {
     width: 18rem;
+  }
+}
+
+@keyframes slideInSuitcase {
+  0% {
+    transform: translate3d(0, 30rem, 0) scale(0.1);
+  }
+
+  90% {
+    transform: translate3d(0, -5rem, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes fadeInFlamingo {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 30rem, 0) rotate3d(0, 0, 1, -20deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0);
+  }
+}
+
+@keyframes shakeFlamingo {
+  50% {
+    transform: translate(0, 2rem) rotate3d(0, 0, 0, -5deg);
+  }
+}
+
+@keyframes shakeLeafBlue1 {
+  0% {
+    opacity: 0;
+    transform: rotate3d(0, 0, 1, -30deg);
+  }
+
+  20% {
+    transform: rotate3d(0, 0, 1, 10deg);
+  }
+
+  30% {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  45% {
+    transform: rotate3d(0, 0, 1, 10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes shakeLeafBlue2 {
+  0% {
+    opacity: 0;
+    transform: rotate3d(0, 0, 1, 50deg);
+  }
+
+  20% {
+    transform: rotate3d(0, 0, 1, -15deg);
+  }
+
+  30% {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 10deg);
+  }
+
+  45% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  85% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes shakeLeafGreen {
+  0% {
+    opacity: 0;
+    transform: rotate3d(0, 0, 1, -15deg);
+  }
+
+  20% {
+    transform: rotate3d(0, 0, 1, 10deg);
+  }
+
+  30% {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, -7deg);
+  }
+
+  45% {
+    transform: rotate3d(0, 0, 1, 7deg);
+  }
+
+  60% {
+    transform: rotate3d(0, 0, 1, -3deg);
+  }
+
+  85% {
+    transform: rotate3d(0, 0, 1, 3deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 0deg);
   }
 }

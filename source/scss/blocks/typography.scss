@@ -1,0 +1,22 @@
+.accent-typography {
+  display: inline-flex;
+  overflow-y: hidden;
+  padding: 0 0.02em;
+  line-height: 1;
+  
+  &:not(:last-of-type) {
+    padding-right: 5px;
+  }
+
+  span {
+    margin: 0 -0.02em;
+    display: inline-block;
+    transform: translate3d(0, 120%, 0);
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+  }
+
+  &.active > span {
+    transform: translate3d(0, 20%, 0);
+  }
+}
